@@ -1,7 +1,8 @@
 // import { useState } from 'react';
 import './App.css';
-import PersonalInfo from './components/Info-personal';
-import ExperienceInfo from './components/info-experience';
+import PersonalInfo from './components/InfoPersonal';
+import EducationInfo from './components/InfoEducation';
+// import ExperienceInfo from './components/InfoExperience';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <h1 className='title'>CV Application</h1>
       <div>
         <PersonalInfo></PersonalInfo>
-        <ExperienceInfo></ExperienceInfo>
+        <EducationInfo></EducationInfo>
       </div>
     </>
   );
