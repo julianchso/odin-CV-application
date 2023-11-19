@@ -8,12 +8,11 @@ function EducationInfo() {
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    console.log(e.target);
     setEducation({ ...education, [name]: value });
     // console.log(`${name}: ${value}`);
   };
 
-  const addEducation = (e) => {
+  const addEducation = () => {
     const educationNew = {
       school: education.school,
       degree: education.degree,
@@ -22,9 +21,6 @@ function EducationInfo() {
       location: education.location,
       id: uuidv4(),
     };
-
-    console.log(e.target.value);
-
     setEducationList([...educationList, educationNew]);
   };
   console.log(educationList);
@@ -33,7 +29,7 @@ function EducationInfo() {
     <>
       <form onSubmit={(e) => e.preventDefault}>
         <h2>Education</h2>
-        <div className='experienceContainer'>
+        <div className='InfoContainer'>
           <label htmlFor='school'>School</label>
           <input type='text' name='school' id='school' onChange={onChange} />
           <label htmlFor='degree'>Degree</label>
@@ -48,8 +44,8 @@ function EducationInfo() {
           <input type='text' name='location' id='location' onChange={onChange} />
         </div>
         <button
-          className='SubmitBtn'
           type='button'
+          className='SubmitBtn'
           onClick={addEducation}
           onSubmit={(e) => e.preventDefault}
         >

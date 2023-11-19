@@ -2,7 +2,7 @@
 import './App.css';
 import PersonalInfo from './components/InfoPersonal';
 import EducationInfo from './components/InfoEducation';
-// import ExperienceInfo from './components/InfoExperience';
+import ExperienceInfo from './components/InfoExperience';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <div>
         <PersonalInfo></PersonalInfo>
         <EducationInfo></EducationInfo>
+        <ExperienceInfo></ExperienceInfo>
       </div>
     </>
   );

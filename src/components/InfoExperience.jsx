@@ -1,32 +1,35 @@
 import { useState } from 'react';
 import './info.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function ExperienceInfo() {
   const [experience, setExperience] = useState([]);
+  const [experienceList, setExperienceList] = useState([]);
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    console.log(`${name}: ${value}`);
+    // console.log(e.target);
+    setExperience({ ...experience, [name]: value });
   };
 
-  const addExperience = (e) => {
+  const addExperience = () => {
     const experienceNew = {
-      position: e.position.value,
-      company: e.company.value,
-      startDate: e.startDate.value,
-      endDate: e.endDate.value,
-      location: e.location.value,
+      position: experience.position,
+      company: experience.company,
+      startDate: experience.startDate,
+      endDate: experience.endDate,
+      description: experience.description,
+      id: uuidv4(),
     };
-
-    setExperience([...experience, experienceNew]);
+    setExperienceList([...experienceList, experienceNew]);
   };
-  console.log(experience);
+  console.log(experienceList);
 
   return (
     <>
       <form onSubmit={(e) => e.preventDefault}>
         <h2>Experience</h2>
-        <div className='experienceContainer'>
+        <div className='InfoContainer'>
           <label htmlFor='position'>Position</label>
           <input type='text' name='position' id='position' onChange={onChange} />
           <label htmlFor='company'>Company</label>
@@ -41,8 +44,8 @@ function ExperienceInfo() {
           <input type='text' name='location' id='location' onChange={onChange} />
         </div>
         <button
-          className='SubmitBtn'
           type='button'
+          className='SubmitBtn'
           onClick={addExperience}
           onSubmit={(e) => e.preventDefault}
         >
