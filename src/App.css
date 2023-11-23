@@ -88,3 +88,7 @@ h2 {
 .title {
   margin: 10px;
 }
+
+.inputWrapper {
+  max-width: 45%;
+}

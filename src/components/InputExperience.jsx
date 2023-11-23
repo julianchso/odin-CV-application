@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import './info.css';
+import './input.css';
 import { v4 as uuidv4 } from 'uuid';
 
-function ExperienceInfo() {
+function InputExperience() {
   const [experience, setExperience] = useState([]);
   const [experienceList, setExperienceList] = useState([]);
 
@@ -56,4 +56,4 @@ function ExperienceInfo() {
   );
 }
 
-export default ExperienceInfo;
+export default InputExperience;

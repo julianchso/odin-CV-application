@@ -1,25 +1,13 @@
-import { useState } from 'react';
-import './info.css';
+// import { useState } from 'react';
+import './input.css';
+import PropTypes from 'prop-types';
 
-// parent component
-function PersonalInfo() {
-  const [input, setInput] = useState([]);
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    console.log(`${name}: ${value}`);
-    setInput({
-      ...input,
-      [name]: value,
-    });
-  };
-  console.log(input);
-
+function InputPersonal({ onChange }) {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <h2>Personal Details</h2>
-        <div className='personalInfoContainer'>
+        <div className='InputPersonalContainer'>
           <label htmlFor='firstName'>First Name</label>
           <input type='text' name='firstName' id='firstName' onChange={onChange} />
           <label htmlFor='lastName'>Last Name</label>
@@ -36,4 +24,8 @@ function PersonalInfo() {
   );
 }
 
-export default PersonalInfo;
+InputPersonal.propTypes = {
+  onChange: PropTypes.func,
+};
+
+export default InputPersonal;

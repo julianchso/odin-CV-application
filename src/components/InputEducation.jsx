@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import './info.css';
+import './input.css';
 import { v4 as uuidv4 } from 'uuid';
 
-function EducationInfo() {
+function InputEducation() {
   const [education, setEducation] = useState([]);
   const [educationList, setEducationList] = useState([]);
 
   const onChange = (e) => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
-    // console.log(`${name}: ${value}`);
+    console.log(`${name}: ${value}`);
   };
 
   const addEducation = () => {
@@ -56,4 +56,4 @@ function EducationInfo() {
   );
 }
 
-export default EducationInfo;
+export default InputEducation;
