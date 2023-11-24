@@ -89,6 +89,11 @@ h2 {
   margin: 10px;
 }
 
-.inputWrapper {
+.inputSection {
+  display: flex;
+  flex-direction: column;
   max-width: 45%;
+}
+
+.outputWrapper {
 }

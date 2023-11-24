@@ -7,6 +7,7 @@ import OutputPersonal from './components/OutputPersonal';
 
 function App() {
   const [input, setInput] = useState([]);
+  const fullName = `${input.firstName} ${input.lastName}`;
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -26,12 +27,16 @@ function App() {
           {/* <InputEducation></InputEducation> */}
           {/* <InputExperience></InputExperience> */}
         </div>
+      </div>
+      <div className='outputWrapper'>
         <div className='outputSection'>
-          <OutputPersonal firstName={input.firstName}></OutputPersonal>
-          <OutputPersonal lastName={input.lastName}></OutputPersonal>
-          <OutputPersonal email={input.email}></OutputPersonal>
-          <OutputPersonal phoneNumber={input.phoneNumber}></OutputPersonal>
-          <OutputPersonal address={input.address}></OutputPersonal>
+          <OutputPersonal
+            firstName={input.firstName}
+            lastName={input.lastName}
+            email={input.email}
+            phoneNumber={input.phoneNumber}
+            address={input.address}
+          ></OutputPersonal>
         </div>
       </div>
     </>
