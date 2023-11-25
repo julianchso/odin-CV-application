@@ -7,7 +7,6 @@ import OutputPersonal from './components/OutputPersonal';
 
 function App() {
   const [input, setInput] = useState([]);
-  const fullName = `${input.firstName} ${input.lastName}`;
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -20,23 +19,25 @@ function App() {
 
   return (
     <>
-      <h1 className='title'>CV Application</h1>
-      <div className='inputWrapper'>
-        <div className='inputSection'>
-          <InputPersonal onChange={onChange}></InputPersonal>
-          {/* <InputEducation></InputEducation> */}
-          {/* <InputExperience></InputExperience> */}
+      <div className='app'>
+        <div className='inputWrapper'>
+          <div className='inputSection'>
+            <InputPersonal onChange={onChange}></InputPersonal>
+            <InputEducation></InputEducation>
+            <InputExperience></InputExperience>
+          </div>
         </div>
-      </div>
-      <div className='outputWrapper'>
-        <div className='outputSection'>
-          <OutputPersonal
-            firstName={input.firstName}
-            lastName={input.lastName}
-            email={input.email}
-            phoneNumber={input.phoneNumber}
-            address={input.address}
-          ></OutputPersonal>
+        <div className='outputWrapper'>
+          <div className='outputSection'>
+            <OutputPersonal
+              className='contactInfo'
+              firstName={input.firstName}
+              lastName={input.lastName}
+              email={input.email}
+              phoneNumber={input.phoneNumber}
+              address={input.address}
+            ></OutputPersonal>
+          </div>
         </div>
       </div>
     </>
