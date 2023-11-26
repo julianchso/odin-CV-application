@@ -9,17 +9,11 @@ form {
 }
 
 input {
+  padding: 7px;
+  margin-top: 0px;
   margin-bottom: 10px;
-}
-
-.alignLeft {
-  text-align: left;
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 .inputContainer {
@@ -31,9 +25,26 @@ input {
   flex-direction: row;
 }
 
-.formBtnContainer Button {
-  padding: 10px 20px;
+.alignLeft {
+  text-align: left;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  margin: 0 0 010px;
+}
+
+.formBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   margin: 0 20px;
+}
+
+.formBtnContainer button {
+  margin-left: 20px;
 }
 
 .cancelBtn {
@@ -47,13 +58,6 @@ input {
   margin: 0 20px;
 }
 
-.inputGroup label {
+label {
   margin: 5px 0;
-}
-
-input {
-  padding: 7px;
-  margin-top: 5px;
-  border: none;
-  border-radius: 5px;
 }

@@ -40,10 +40,14 @@ function InputEducation() {
           </div>
           <div className='inputGroup'>
             <div className='dateContainer'>
-              <label htmlFor='startDate'>Start Date</label>
-              <input type='date' name='startDate' id='startDate' onChange={onChange} />
-              <label htmlFor='endDate'>End Date</label>
-              <input type='date' name='endDate' id='endDate' onChange={onChange} />
+              <div className='dateContainer__input'>
+                <label htmlFor='startDate'>Start Date</label>
+                <input type='date' name='startDate' id='startDate' onChange={onChange} />
+              </div>
+              <div className='dateContainer__input'>
+                <label htmlFor='endDate'>End Date</label>
+                <input type='date' name='endDate' id='endDate' onChange={onChange} />
+              </div>
             </div>
           </div>
           <div className='inputGroup'>
