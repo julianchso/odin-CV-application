@@ -9,7 +9,7 @@ function OutputPersonal({ firstName, lastName, email, phoneNumber, address }) {
   // console.log(value);
   const fullName = `${firstName} ${lastName}`;
   return (
-    <div className='personalInfo'>
+    <div className='personalInfoContainer'>
       <div className='fullName'>
         {<h1 className='personalInfo__name'>{firstName}</h1>}
         {/* TODO: fix spacing size */}

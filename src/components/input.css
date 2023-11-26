@@ -12,10 +12,18 @@ input {
   margin-bottom: 10px;
 }
 
-.personalInfoContainer {
+.alignLeft {
+  text-align: left;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0 10px;
+}
+
+.inputContainer {
+  margin: 20px 0;
 }
 
 .dateContainer {
@@ -23,23 +31,29 @@ input {
   flex-direction: row;
 }
 
-.SubmitBtn {
+.formBtnContainer Button {
   padding: 10px 20px;
-  margin: 20px;
+  margin: 0 20px;
 }
 
-.InfoContainer {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+.cancelBtn {
+  background-color: aliceblue;
+  color: #000;
 }
 
-.input-group {
+.inputGroup {
   display: flex;
   flex-direction: column;
   margin: 0 20px;
 }
 
-.input-group label {
+.inputGroup label {
   margin: 5px 0;
+}
+
+input {
+  padding: 7px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
 }

@@ -1,3 +1,21 @@
 .personalInfo__name {
   display: inline-block;
 }
+
+.personalInfoContainer {
+  height: 200px;
+  width: 800px;
+  color: #fff;
+  background-color: #001b33;
+  padding: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 40px;
+}

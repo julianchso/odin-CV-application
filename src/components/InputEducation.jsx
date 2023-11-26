@@ -27,30 +27,48 @@ function InputEducation() {
 
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault}>
+      <form onSubmit={(e) => e.preventDefault} className='formContainer'>
         <h2>Education</h2>
-        <div className='InfoContainer'>
-          <label htmlFor='school'>School</label>
-          <input type='text' name='school' id='school' onChange={onChange} />
-          <label htmlFor='degree'>Degree</label>
-          <input type='text' name='degree' id='degree' onChange={onChange} />
-          <div className='dateContainer'>
-            <label htmlFor='startDate'>Start Date</label>
-            <input type='date' name='startDate' id='startDate' onChange={onChange} />
-            <label htmlFor='endDate'>End Date</label>
-            <input type='date' name='endDate' id='endDate' onChange={onChange} />
+        <div className='inputContainer alignLeft'>
+          <div className='inputGroup'>
+            <label htmlFor='school'>School</label>
+            <input type='text' name='school' id='school' onChange={onChange} />
           </div>
-          <label htmlFor='location'>Location</label>
-          <input type='text' name='location' id='location' onChange={onChange} />
+          <div className='inputGroup'>
+            <label htmlFor='degree'>Degree</label>
+            <input type='text' name='degree' id='degree' onChange={onChange} />
+          </div>
+          <div className='inputGroup'>
+            <div className='dateContainer'>
+              <label htmlFor='startDate'>Start Date</label>
+              <input type='date' name='startDate' id='startDate' onChange={onChange} />
+              <label htmlFor='endDate'>End Date</label>
+              <input type='date' name='endDate' id='endDate' onChange={onChange} />
+            </div>
+          </div>
+          <div className='inputGroup'>
+            <label htmlFor='location'>Location</label>
+            <input type='text' name='location' id='location' onChange={onChange} />
+          </div>
         </div>
-        <button
-          type='button'
-          className='SubmitBtn'
-          onClick={addEducation}
-          onSubmit={(e) => e.preventDefault}
-        >
-          Save
-        </button>
+        <div className='formBtnContainer'>
+          <button
+            type='button'
+            className='cancelBtn'
+            onClick={addEducation}
+            onSubmit={(e) => e.preventDefault}
+          >
+            Cancel
+          </button>
+          <button
+            type='button'
+            className='submitBtn'
+            onClick={addEducation}
+            onSubmit={(e) => e.preventDefault}
+          >
+            Save
+          </button>
+        </div>
       </form>
     </>
   );

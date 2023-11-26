@@ -27,30 +27,43 @@ function InputExperience() {
 
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault}>
+      <form onSubmit={(e) => e.preventDefault} className='formContainer'>
         <h2>Experience</h2>
-        <div className='InfoContainer'>
-          <label htmlFor='position'>Position</label>
-          <input type='text' name='position' id='position' onChange={onChange} />
-          <label htmlFor='company'>Company</label>
-          <input type='text' name='company' id='company' onChange={onChange} />
-          <div className='dateContainer'>
-            <label htmlFor='startDate'>Start Date</label>
-            <input type='date' name='startDate' id='startDate' onChange={onChange} />
-            <label htmlFor='endDate'>End Date</label>
-            <input type='date' name='endDate' id='endDate' onChange={onChange} />
+        <div className='inputContainer alignLeft'>
+          <div className='inputGroup'>
+            <label htmlFor='position'>Position</label>
+            <input type='text' name='position' id='position' onChange={onChange} />
           </div>
-          <label htmlFor='location'>Location</label>
-          <input type='text' name='location' id='location' onChange={onChange} />
+          <div className='inputGroup'>
+            <label htmlFor='company'>Company</label>
+            <input type='text' name='company' id='company' onChange={onChange} />
+          </div>
+          <div className='inputGroup'>
+            <div className='dateContainer'>
+              <label htmlFor='startDate'>Start Date</label>
+              <input type='date' name='startDate' id='startDate' onChange={onChange} />
+              <label htmlFor='endDate'>End Date</label>
+              <input type='date' name='endDate' id='endDate' onChange={onChange} />
+            </div>
+          </div>
+          <div className='inputGroup'>
+            <label htmlFor='location'>Location</label>
+            <input type='text' name='location' id='location' onChange={onChange} />
+          </div>
         </div>
-        <button
-          type='button'
-          className='SubmitBtn'
-          onClick={addExperience}
-          onSubmit={(e) => e.preventDefault}
-        >
-          Save
-        </button>
+        <div className='formBtnContainer'>
+          <button type='button' className='cancelBtn'>
+            Cancel
+          </button>
+          <button
+            type='button'
+            className='submitBtn'
+            onClick={addExperience}
+            onSubmit={(e) => e.preventDefault}
+          >
+            Save
+          </button>
+        </div>
       </form>
     </>
   );
