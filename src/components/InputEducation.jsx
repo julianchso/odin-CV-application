@@ -22,7 +22,19 @@ function InputEducation() {
       id: uuidv4(),
     };
     setEducationList([...educationList, educationNew]);
+    clear();
   };
+
+  const clear = () => {
+    setEducation({
+      school: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+      location: '',
+    });
+  };
+
   console.log(educationList);
 
   return (
@@ -32,34 +44,64 @@ function InputEducation() {
         <div className='inputContainer alignLeft'>
           <div className='inputGroup'>
             <label htmlFor='school'>School</label>
-            <input type='text' name='school' id='school' onChange={onChange} />
+            <input
+              type='text'
+              name='school'
+              id='school'
+              value={education.school}
+              onChange={onChange}
+            />
           </div>
           <div className='inputGroup'>
             <label htmlFor='degree'>Degree</label>
-            <input type='text' name='degree' id='degree' onChange={onChange} />
+            <input
+              type='text'
+              name='degree'
+              id='degree'
+              value={education.degree}
+              onChange={onChange}
+            />
           </div>
           <div className='inputGroup'>
             <div className='dateContainer'>
               <div className='dateContainer__input'>
                 <label htmlFor='startDate'>Start Date</label>
-                <input type='date' name='startDate' id='startDate' onChange={onChange} />
+                <input
+                  type='date'
+                  name='startDate'
+                  id='startDate'
+                  value={education.startDate}
+                  onChange={onChange}
+                />
               </div>
               <div className='dateContainer__input'>
                 <label htmlFor='endDate'>End Date</label>
-                <input type='date' name='endDate' id='endDate' onChange={onChange} />
+                <input
+                  type='date'
+                  name='endDate'
+                  id='endDate'
+                  value={education.endDate}
+                  onChange={onChange}
+                />
               </div>
             </div>
           </div>
           <div className='inputGroup'>
             <label htmlFor='location'>Location</label>
-            <input type='text' name='location' id='location' onChange={onChange} />
+            <input
+              type='text'
+              name='location'
+              id='location'
+              value={education.location}
+              onChange={onChange}
+            />
           </div>
         </div>
         <div className='formBtnContainer'>
           <button
             type='button'
             className='cancelBtn'
-            onClick={addEducation}
+            onClick={clear}
             onSubmit={(e) => e.preventDefault}
           >
             Cancel

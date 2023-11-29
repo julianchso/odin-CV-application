@@ -4,6 +4,8 @@ import InputPersonal from './components/InputPersonal';
 import InputEducation from './components/InputEducation';
 import InputExperience from './components/InputExperience';
 import OutputPersonal from './components/OutputPersonal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 
 function App() {
   const [input, setInput] = useState([]);
@@ -31,11 +33,10 @@ function App() {
           <div className='outputSection'>
             <OutputPersonal
               className='contactInfo'
-              firstName={input.firstName}
-              lastName={input.lastName}
+              fullName={input.fullName}
               email={input.email}
-              phoneNumber={input.phoneNumber}
-              address={input.address}
+              phone={input.phone}
+              location={input.location}
             ></OutputPersonal>
           </div>
         </div>

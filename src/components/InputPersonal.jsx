@@ -9,24 +9,20 @@ function InputPersonal({ onChange }) {
         <h2>Personal Details</h2>
         <div className='inputContainer alignLeft'>
           <div className='inputGroup'>
-            <label htmlFor='firstName'>First Name</label>
-            <input type='text' name='firstName' id='firstName' onChange={onChange} />
-          </div>
-          <div className='inputGroup'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input type='text' name='lastName' id='lastName' onChange={onChange} />
+            <label htmlFor='fullName'>Full Name</label>
+            <input type='text' name='fullName' id='fullName' onChange={onChange} />
           </div>
           <div className='inputGroup'>
             <label htmlFor='email'>Email</label>
             <input type='text' name='email' id='email' onChange={onChange} />
           </div>
           <div className='inputGroup'>
-            <label htmlFor='phoneNumber'>Phone Number</label>
-            <input type='text' name='phoneNumber' id='phoneNumber' onChange={onChange} />
+            <label htmlFor='phone'>Phone Number</label>
+            <input type='text' name='phone' id='phone' onChange={onChange} />
           </div>
           <div className='inputGroup'>
-            <label htmlFor='address'>Address</label>
-            <input type='text' name='address' id='address' onChange={onChange} />
+            <label htmlFor='location'>Location</label>
+            <input type='text' name='location' id='location' onChange={onChange} />
           </div>
         </div>
       </form>

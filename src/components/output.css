@@ -37,7 +37,12 @@
 }
 
 .fullName {
+  height: var(--fs-h1);
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.faIcon {
+  padding-right: 0.5rem;
 }
