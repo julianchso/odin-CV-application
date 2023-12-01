@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import './input.css';
 import { v4 as uuidv4 } from 'uuid';
+import exampleData from './exampleData';
 
 function InputEducation() {
-  const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState(exampleData.education);
   const [educationList, setEducationList] = useState([]);
 
   const onChange = (e) => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
-    console.log(`${name}: ${value}`);
+    // console.log(`${name}: ${value}`);
   };
 
   const addEducation = () => {
@@ -21,18 +22,14 @@ function InputEducation() {
       location: education.location,
       id: uuidv4(),
     };
+
     setEducationList([...educationList, educationNew]);
     clear();
   };
 
   const clear = () => {
-    setEducation({
-      school: '',
-      degree: '',
-      startDate: '',
-      endDate: '',
-      location: '',
-    });
+    console.log(education);
+    setEducation(exampleData.education);
   };
 
   console.log(educationList);
@@ -100,11 +97,11 @@ function InputEducation() {
         <div className='formBtnContainer'>
           <button
             type='button'
-            className='cancelBtn'
+            className='clearBtn'
             onClick={clear}
             onSubmit={(e) => e.preventDefault}
           >
-            Cancel
+            Clear
           </button>
           <button
             type='button'

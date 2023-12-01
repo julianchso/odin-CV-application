@@ -56,8 +56,8 @@ function InputExperience() {
           </div>
         </div>
         <div className='formBtnContainer'>
-          <button type='button' className='cancelBtn'>
-            Cancel
+          <button type='button' className='clearBtn'>
+            Clear
           </button>
           <button
             type='button'

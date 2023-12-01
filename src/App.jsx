@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
 import InputPersonal from './components/InputPersonal';
-import InputEducation from './components/InputEducation';
 import InputExperience from './components/InputExperience';
+import InputEducation from './components/InputEducation';
 import OutputPersonal from './components/OutputPersonal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { icon } from '@fortawesome/fontawesome-svg-core';
+import OutputExperience from './components/OutputExperience';
+import OutputEducation from './components/outputEducation';
 
 function App() {
   const [input, setInput] = useState([]);
@@ -39,6 +39,10 @@ function App() {
               location={input.location}
             ></OutputPersonal>
           </div>
+        </div>
+        <div>
+          <div className='outputExperience'></div>
+          <div className='outputEducation'></div>
         </div>
       </div>
     </>
