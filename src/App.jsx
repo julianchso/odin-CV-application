@@ -6,6 +6,7 @@ import InputEducation from './components/InputEducation';
 import OutputPersonal from './components/OutputPersonal';
 import OutputExperience from './components/OutputExperience';
 import OutputEducation from './components/outputEducation';
+import exampleData from './exampleData';
 
 function App() {
   const [input, setInput] = useState([]);
@@ -25,8 +26,8 @@ function App() {
         <div className='inputWrapper'>
           <div className='inputSection'>
             <InputPersonal onChange={onChange}></InputPersonal>
-            <InputEducation></InputEducation>
             <InputExperience></InputExperience>
+            <InputEducation></InputEducation>
           </div>
         </div>
         <div className='outputWrapper'>
@@ -38,11 +39,9 @@ function App() {
               phone={input.phone}
               location={input.location}
             ></OutputPersonal>
+            <OutputExperience data={exampleData.experience}></OutputExperience>
+            <OutputEducation data={exampleData.education}></OutputEducation>
           </div>
-        </div>
-        <div>
-          <div className='outputExperience'></div>
-          <div className='outputEducation'></div>
         </div>
       </div>
     </>

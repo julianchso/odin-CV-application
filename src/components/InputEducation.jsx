@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './input.css';
 import { v4 as uuidv4 } from 'uuid';
-import exampleData from './exampleData';
+import exampleData from '../exampleData';
+import PropTypes from 'prop-types';
 
-function InputEducation() {
+function InputEducation(props) {
   const [education, setEducation] = useState(exampleData.education);
   const [educationList, setEducationList] = useState([]);
 
@@ -64,7 +65,7 @@ function InputEducation() {
               <div className='dateContainer__input'>
                 <label htmlFor='startDate'>Start Date</label>
                 <input
-                  type='date'
+                  type='month'
                   name='startDate'
                   id='startDate'
                   value={education.startDate}
@@ -74,7 +75,7 @@ function InputEducation() {
               <div className='dateContainer__input'>
                 <label htmlFor='endDate'>End Date</label>
                 <input
-                  type='date'
+                  type='month'
                   name='endDate'
                   id='endDate'
                   value={education.endDate}
@@ -116,5 +117,12 @@ function InputEducation() {
     </>
   );
 }
+
+InputEducation.propTypes = {
+  school: PropTypes.string,
+  degree: PropTypes.string,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
+};
 
 export default InputEducation;
