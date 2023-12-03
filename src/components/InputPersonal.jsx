@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import './input.css';
 import PropTypes from 'prop-types';
+import exampleData from '../exampleData';
 
 function InputPersonal({ onChange }) {
   return (

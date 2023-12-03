@@ -23,15 +23,15 @@ function App() {
   return (
     <>
       <div className='app'>
-        <div className='inputWrapper'>
-          <div className='inputSection'>
+        <div className='inputSection'>
+          <div className='inputWrapper'>
             <InputPersonal onChange={onChange}></InputPersonal>
             <InputExperience></InputExperience>
             <InputEducation></InputEducation>
           </div>
         </div>
-        <div className='outputWrapper'>
-          <div className='outputSection'>
+        <div className='outputSection'>
+          <div className='outputWrapper'>
             <OutputPersonal
               className='contactInfo'
               fullName={input.fullName}
@@ -39,8 +39,10 @@ function App() {
               phone={input.phone}
               location={input.location}
             ></OutputPersonal>
-            <OutputExperience data={exampleData.experience}></OutputExperience>
-            <OutputEducation data={exampleData.education}></OutputEducation>
+            <div className='resumeSection'>
+              <OutputExperience data={exampleData.experience}></OutputExperience>
+              <OutputEducation data={exampleData.education}></OutputEducation>
+            </div>
           </div>
         </div>
       </div>

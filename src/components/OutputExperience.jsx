@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
 import './output.css';
-import InputExperience from './InputEducation';
-import exampleData from '../exampleData';
 
 function OutputExperience({ data }) {
-  console.log(data);
-  console.log(typeof data);
-
-  const arrData = data.map((role) => (
-    <div key={role.id}>
-      <div className='title'>
-        <p>{role.position}</p>
-        <p>{role.company}</p>
+  const arrData =
+    data &&
+    data.map((role) => (
+      <div key={role.id}>
+        <div className='outputCard'>
+          <div className='outputCard__title'>
+            <p className='outputCard__position'>{role.position}</p>
+            <p className='outputCard__company'>{role.company}</p>
+            <p className='outputCard__location'>{role.location}</p>
+          </div>
+          <div className='outputCard__dates'>
+            <p>
+              {role.startDate} – {role.endDate}
+            </p>
+          </div>
+        </div>
       </div>
-      <div className='dates'>
-        <p>
-          {role.startDate} - {role.endDate}
-        </p>
-      </div>
-    </div>
-  ));
+    ));
 
   return (
     <>
-      {arrData && <h1>Experience</h1>}
+      {arrData && <h3 className='sectionTitle'>Experience</h3>}
       {arrData}
     </>
   );
