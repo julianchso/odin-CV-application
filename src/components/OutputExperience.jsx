@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import './output.css';
 
 function OutputExperience({ data }) {

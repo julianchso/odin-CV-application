@@ -42,17 +42,21 @@ function InputExperience() {
             <div className='dateContainer'>
               <div className='dateContainer__input'>
                 <label htmlFor='startDate'>Start Date</label>
-                <input type='date' name='startDate' id='startDate' onChange={onChange} />
+                <input type='month' name='startDate' id='startDate' onChange={onChange} />
               </div>
               <div className='dateContainer__input'>
                 <label htmlFor='endDate'>End Date</label>
-                <input type='date' name='endDate' id='endDate' onChange={onChange} />
+                <input type='month' name='endDate' id='endDate' onChange={onChange} />
               </div>
             </div>
           </div>
           <div className='inputGroup'>
             <label htmlFor='location'>Location</label>
             <input type='text' name='location' id='location' onChange={onChange} />
+          </div>
+          <div className='inputGroup'>
+            <label htmlFor='description'>Description</label>
+            <input type='text' name='description' id='description' onChange={onChange} />
           </div>
         </div>
         <div className='formBtnContainer'>

@@ -134,6 +134,21 @@ table {
 }
 
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: #f3f4f6;
+
+  --main-bg-color: #f3f4f6;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
   --ff-primary: 'arial', sans-serif;
 
   --fw-reg: 300;
@@ -168,12 +183,13 @@ h2 {
 .inputSection {
   display: flex;
   justify-content: center;
+  margin: 0 20px;
 }
 
 .inputWrapper {
   flex-direction: column;
-  max-width: 80%;
   display: flex;
+  gap: 28px;
 }
 
 .outputSection {

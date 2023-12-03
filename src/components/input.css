@@ -1,5 +1,4 @@
 form {
-  border: black solid 2px;
   border-radius: 20px;
   margin: 20px;
 }
@@ -26,10 +25,12 @@ input {
 }
 
 .formContainer {
+  margin: 0px;
   display: flex;
   flex-direction: column;
   padding: 15px;
-  margin: 0 0 010px;
+  background-color: #fff;
+  /* box-shadow: 5px 10px #a4a4a4; */
 }
 
 .formBtnContainer {
@@ -41,10 +42,19 @@ input {
 
 .formBtnContainer button {
   margin-left: 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
-.clearBtn {
-  background-color: aliceblue;
+.formBtnContainer .clearBtn {
+  background-color: #fff;
+  border: #a4a4a4 solid 1px;
   color: #000;
 }
 
@@ -56,4 +66,8 @@ input {
 
 label {
   margin: 5px 0;
+}
+
+input {
+  background-color: var(--main-bg-color);
 }
