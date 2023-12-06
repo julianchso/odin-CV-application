@@ -3,12 +3,18 @@ form {
   margin: 20px;
 }
 
-input {
+input,
+textarea {
   padding: 7px;
   margin-top: 0px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
+  background-color: var(--main-bg-color);
+}
+
+textarea {
+  resize: none;
 }
 
 .inputContainer {
@@ -52,10 +58,15 @@ input {
   transition: border-color 0.25s;
 }
 
-.formBtnContainer .clearBtn {
+.formBtnContainer .clearFieldsBtn {
   background-color: #fff;
   border: #a4a4a4 solid 1px;
   color: #000;
+}
+
+.formBtnContainer .submitBtn {
+  background-color: #001b33;
+  color: #fff;
 }
 
 .inputGroup {
@@ -66,8 +77,4 @@ input {
 
 label {
   margin: 5px 0;
-}
-
-input {
-  background-color: var(--main-bg-color);
 }

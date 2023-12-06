@@ -6,16 +6,19 @@ function OutputExperience({ data }) {
     data.map((role) => (
       <div key={role.id}>
         <div className='outputCard'>
-          <div className='outputCard__title'>
-            <p className='outputCard__position'>{role.position}</p>
-            <p className='outputCard__company'>{role.company}</p>
-            <p className='outputCard__location'>{role.location}</p>
+          <div className='outputCard__main'>
+            <div className='outputCard__title'>
+              <p className='outputCard__position outputCard--padding'>{role.position}</p>
+              <p className='outputCard__company outputCard--padding'>{role.company}</p>
+              <p className='outputCard__location outputCard--padding'>{role.location}</p>
+            </div>
+            <div className='outputCard__dates'>
+              <p>
+                {role.startDate} – {role.endDate}
+              </p>
+            </div>
           </div>
-          <div className='outputCard__dates'>
-            <p>
-              {role.startDate} – {role.endDate}
-            </p>
-          </div>
+          <p className='outputCard__description'>{role.description}</p>
         </div>
       </div>
     ));

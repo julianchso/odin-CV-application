@@ -25,12 +25,12 @@ function InputEducation(props) {
     };
 
     setEducationList([...educationList, educationNew]);
-    clear();
+    clearFields();
   };
 
-  const clear = () => {
+  const clearFields = () => {
     console.log(education);
-    setEducation(exampleData.education);
+    // setEducation((exampleData.education['school'] = ''));
   };
 
   console.log(educationList);
@@ -98,8 +98,8 @@ function InputEducation(props) {
         <div className='formBtnContainer'>
           <button
             type='button'
-            className='clearBtn'
-            onClick={clear}
+            className='clearFieldsBtn'
+            onClick={clearFields}
             onSubmit={(e) => e.preventDefault}
           >
             Clear
