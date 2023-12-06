@@ -75,11 +75,3 @@
 .outputCard__location {
   font-style: italic;
 }
-
-.dateContainer {
-  max-width: 100%;
-}
-
-.dateContainer__input {
-  padding: 0 5px;
-}

@@ -2,21 +2,10 @@ import { useState } from 'react';
 import './input.css';
 import { v4 as uuidv4 } from 'uuid';
 import exampleData from '../exampleData';
-import emptyData from '../emptyData';
-
-// const emptyData = {
-//   experience: {
-//     position: '',
-//     company: '',
-//     startDate: '',
-//     endDate: '',
-//     location: '',
-//     description: '',
-//   },
-// };
+import formData from '../formData';
 
 function InputExperience() {
-  const [experience, setExperience] = useState(emptyData.experience);
+  const [experience, setExperience] = useState(formData.experience);
   const [experienceList, setExperienceList] = useState(exampleData.experience);
 
   const onChange = (e) => {
@@ -55,7 +44,7 @@ function InputExperience() {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault} className='formContainer'>
-        <h2>Experience</h2>
+        <h2 className='sectionHeading'>Experience</h2>
         <div className='inputContainer alignLeft'>
           <div className='inputGroup'>
             <label htmlFor='position'>Position</label>

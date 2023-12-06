@@ -17,6 +17,10 @@ textarea {
   resize: none;
 }
 
+label {
+  margin: 5px 0;
+}
+
 .inputContainer {
   margin: 20px 0;
 }
@@ -24,6 +28,11 @@ textarea {
 .dateContainer {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
+}
+
+.dateContainer__input:nth-of-type(2) {
+  margin-left: 5px;
 }
 
 .alignLeft {
@@ -73,8 +82,4 @@ textarea {
   display: flex;
   flex-direction: column;
   margin: 0 20px;
-}
-
-label {
-  margin: 5px 0;
 }

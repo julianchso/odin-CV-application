@@ -1,4 +1,4 @@
-const emptyData = {
+const formData = {
   experience: {
     position: '',
     company: '',
@@ -16,4 +16,4 @@ const emptyData = {
   },
 };
 
-export default emptyData;
+export default formData;
