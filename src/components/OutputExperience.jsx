@@ -1,6 +1,7 @@
 import './output.css';
 
 function OutputExperience({ data }) {
+  console.log(data);
   const arrData =
     data &&
     data.map((info) => (

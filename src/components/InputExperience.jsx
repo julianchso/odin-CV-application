@@ -1,46 +1,11 @@
 import { useState } from 'react';
-import './input.css';
-import { v4 as uuidv4 } from 'uuid';
 import exampleData from '../exampleData';
 import formData from '../formData';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
+import './input.css';
 
-function InputExperience() {
-  const [experience, setExperience] = useState(formData.experience);
-  const [experienceList, setExperienceList] = useState(exampleData.experience);
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    // console.log(e.target);
-    setExperience({ ...experience, [name]: value });
-  };
-
-  const addExperience = () => {
-    const experienceNew = {
-      position: experience.position,
-      company: experience.company,
-      startDate: experience.startDate,
-      endDate: experience.endDate,
-      location: experience.location,
-      description: experience.description,
-      id: uuidv4(),
-    };
-    setExperienceList([...experienceList, experienceNew]);
-    clearFields();
-  };
-  console.log(experienceList);
-
-  const clearFields = () => {
-    console.log(experience);
-    setExperience({
-      position: '',
-      company: '',
-      startDate: '',
-      endDate: '',
-      location: '',
-      description: '',
-    });
-  };
-
+function InputExperience({ data, onChange, clearFields, addExperience }) {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault} className='formContainer'>
@@ -53,7 +18,7 @@ function InputExperience() {
               type='text'
               name='position'
               id='position'
-              value={experience.position}
+              value={data.position}
               onChange={onChange}
             />
           </div>
@@ -63,7 +28,7 @@ function InputExperience() {
               type='text'
               name='company'
               id='company'
-              value={experience.company}
+              value={data.company}
               onChange={onChange}
             />
           </div>
@@ -75,7 +40,7 @@ function InputExperience() {
                   type='month'
                   name='startDate'
                   id='startDate'
-                  value={experience.startDate}
+                  value={data.startDate}
                   onChange={onChange}
                 />
               </div>
@@ -85,7 +50,7 @@ function InputExperience() {
                   type='month'
                   name='endDate'
                   id='endDate'
-                  value={experience.endDate}
+                  value={data.endDate}
                   onChange={onChange}
                 />
               </div>
@@ -97,7 +62,7 @@ function InputExperience() {
               type='text'
               name='location'
               id='location'
-              value={experience.location}
+              value={data.location}
               onChange={onChange}
             />
           </div>
@@ -106,7 +71,7 @@ function InputExperience() {
             <textarea
               name='description'
               id='description'
-              value={experience.description}
+              value={data.description}
               onChange={onChange}
             />
           </div>
@@ -128,5 +93,12 @@ function InputExperience() {
     </>
   );
 }
+
+// InputExperience.propTypes = {
+//   position: PropTypes.string,
+//   company: PropTypes.string,
+//   startDate: PropTypes.string,
+//   endDate: PropTypes.string,
+// };
 
 export default InputExperience;

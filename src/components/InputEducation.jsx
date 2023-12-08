@@ -29,11 +29,11 @@ function InputEducation(props) {
   };
 
   const clearFields = () => {
-    console.log(education);
+    // console.log(education);
     // setEducation((exampleData.education['school'] = ''));
   };
 
-  console.log(educationList);
+  // console.log(educationList);
 
   return (
     <>
