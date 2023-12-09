@@ -17,7 +17,16 @@ function App() {
   const [experience, setExperience] = useState(formData.experience);
   const [experienceList, setExperienceList] = useState(exampleData.experience);
 
-  const onChange = (e) => {
+  const onChangePersonal = (e) => {
+    const { name, value } = e.target;
+    console.log(`${name}: ${value}`);
+    setPersonal({
+      ...personal,
+      [name]: value,
+    });
+  };
+
+  const onChangeExperience = (e) => {
     const { name, value } = e.target;
     // console.log(e.target);
     setExperience({ ...experience, [name]: value });
@@ -34,7 +43,7 @@ function App() {
       id: uuidv4(),
     };
     setExperienceList([...experienceList, experienceNew]);
-    clearFields();
+    // clearFields();
   };
   // console.log(experienceList);
 
@@ -47,16 +56,6 @@ function App() {
       location: '',
       description: '',
     });
-    console.log(experience.position);
-  };
-
-  const onChangePersonal = (e) => {
-    const { name, value } = e.target;
-    console.log(`${name}: ${value}`);
-    setPersonal({
-      ...personal,
-      [name]: value,
-    });
   };
 
   return (
@@ -64,10 +63,11 @@ function App() {
       <div className='app'>
         <div className='inputSection'>
           <div className='inputWrapper'>
-            <InputPersonal onChange={onChangePersonal}></InputPersonal>
+            <InputPersonal Experience={onChangePersonal}></InputPersonal>
             <InputExperience
-              data={exampleData.experience}
-              onChange={onchange}
+              fieldValue={experience}
+              experienceList={experienceList}
+              onChange={onChangeExperience}
               clearFields={clearFields}
               addExperience={addExperience}
             ></InputExperience>
@@ -84,8 +84,8 @@ function App() {
               location={personal.location}
             ></OutputPersonal>
             <div className='resumeSection'>
-              <OutputExperience data={exampleData.experience}></OutputExperience>
-              <OutputEducation data={exampleData.education}></OutputEducation>
+              <OutputExperience data={experienceList}></OutputExperience>
+              {/* <OutputEducation data={educationList.education}></OutputEducation> */}
             </div>
           </div>
         </div>

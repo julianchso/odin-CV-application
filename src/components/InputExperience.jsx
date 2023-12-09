@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import './input.css';
 
-function InputExperience({ data, onChange, clearFields, addExperience }) {
+function InputExperience({ fieldValue, experienceList, onChange, clearFields, addExperience }) {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault} className='formContainer'>
@@ -18,7 +18,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
               type='text'
               name='position'
               id='position'
-              value={data.position}
+              value={fieldValue.position}
               onChange={onChange}
             />
           </div>
@@ -28,7 +28,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
               type='text'
               name='company'
               id='company'
-              value={data.company}
+              value={fieldValue.company}
               onChange={onChange}
             />
           </div>
@@ -40,7 +40,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
                   type='month'
                   name='startDate'
                   id='startDate'
-                  value={data.startDate}
+                  value={fieldValue.startDate}
                   onChange={onChange}
                 />
               </div>
@@ -50,7 +50,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
                   type='month'
                   name='endDate'
                   id='endDate'
-                  value={data.endDate}
+                  value={fieldValue.endDate}
                   onChange={onChange}
                 />
               </div>
@@ -62,7 +62,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
               type='text'
               name='location'
               id='location'
-              value={data.location}
+              value={fieldValue.location}
               onChange={onChange}
             />
           </div>
@@ -71,7 +71,7 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
             <textarea
               name='description'
               id='description'
-              value={data.description}
+              value={fieldValue.description}
               onChange={onChange}
             />
           </div>
@@ -83,7 +83,10 @@ function InputExperience({ data, onChange, clearFields, addExperience }) {
           <button
             type='button'
             className='submitBtn'
-            onClick={addExperience}
+            onClick={() => {
+              addExperience();
+              clearFields();
+            }}
             onSubmit={(e) => e.preventDefault}
           >
             Save

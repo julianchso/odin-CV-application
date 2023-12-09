@@ -16,7 +16,7 @@ const exampleData = {
       endDate: '2018-05',
       location: 'San Francisco, California',
       description:
-        '• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. <btMorbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue. Suspendisse ut imperdiet dui, vitae sodales diam. Sed et tempus augue, quis gravida lectus. Curabitur vestibulum est in mattis viverra. Integer ultrices velit egestas tellus dapibus viverra. Ut aliquam interdum dui eget vestibulum. Fusce vestibulum massa id mattis facilisis. Aenean augue dui, vehicula quis quam sed, mattis consequat justo.',
+        '• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. <btMorbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
       id: uuidv4(),
     },
     {
@@ -26,7 +26,7 @@ const exampleData = {
       endDate: '2023-12',
       location: 'San Francisco, California',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. Morbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue. Suspendisse ut imperdiet dui, vitae sodales diam. Sed et tempus augue, quis gravida lectus. Curabitur vestibulum est in mattis viverra. Integer ultrices velit egestas tellus dapibus viverra. Ut aliquam interdum dui eget vestibulum. Fusce vestibulum massa id mattis facilisis. Aenean augue dui, vehicula quis quam sed, mattis consequat justo.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. Morbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
       id: uuidv4(),
     },
   ],
