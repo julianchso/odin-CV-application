@@ -17,6 +17,9 @@ function App() {
   const [experience, setExperience] = useState(formData.experience);
   const [experienceList, setExperienceList] = useState(exampleData.experience);
 
+  const [education, setEducation] = useState(formData.education);
+  const [educationList, setEducationList] = useState(exampleData.education);
+
   const onChangePersonal = (e) => {
     const { name, value } = e.target;
     console.log(`${name}: ${value}`);
@@ -26,6 +29,7 @@ function App() {
     });
   };
 
+  // Experience Section
   const onChangeExperience = (e) => {
     const { name, value } = e.target;
     // console.log(e.target);
@@ -42,12 +46,12 @@ function App() {
       description: experience.description,
       id: uuidv4(),
     };
-    setExperienceList([...experienceList, experienceNew]);
-    // clearFields();
+    setExperienceList([experienceNew, ...experienceList]);
+    // clearFieldsExperience();
   };
   // console.log(experienceList);
 
-  const clearFields = () => {
+  const clearFieldsExperience = () => {
     setExperience({
       position: '',
       company: '',
@@ -58,20 +62,62 @@ function App() {
     });
   };
 
+  // Education Section
+  const onChangeEducation = (e) => {
+    const { name, value } = e.target;
+    setEducation({ ...education, [name]: value });
+    // console.log(`${name}: ${value}`);
+  };
+
+  const addEducation = () => {
+    const educationNew = {
+      school: education.school,
+      degree: education.degree,
+      startDate: education.startDate,
+      endDate: education.endDate,
+      location: education.location,
+      id: uuidv4(),
+    };
+    setEducationList([educationNew, ...educationList]);
+    clearFieldsEducation();
+  };
+
+  const clearFieldsEducation = () => {
+    setEducation({
+      school: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+      location: '',
+    });
+  };
+
+  const deleteOutput = () => {
+    // TODO
+    setExperience(experienceList.filter((a) => a.id !== experience.id));
+    console.log('delete');
+  };
+
   return (
     <>
       <div className='app'>
         <div className='inputSection'>
           <div className='inputWrapper'>
-            <InputPersonal Experience={onChangePersonal}></InputPersonal>
+            <InputPersonal onChange={onChangePersonal}></InputPersonal>
             <InputExperience
               fieldValue={experience}
               experienceList={experienceList}
               onChange={onChangeExperience}
-              clearFields={clearFields}
+              clearFields={clearFieldsExperience}
               addExperience={addExperience}
             ></InputExperience>
-            <InputEducation></InputEducation>
+            <InputEducation
+              fieldValue={education}
+              educationList={educationList}
+              onChange={onChangeEducation}
+              clearFields={clearFieldsEducation}
+              addEducation={addEducation}
+            ></InputEducation>
           </div>
         </div>
         <div className='outputSection'>
@@ -84,8 +130,11 @@ function App() {
               location={personal.location}
             ></OutputPersonal>
             <div className='resumeSection'>
-              <OutputExperience data={experienceList}></OutputExperience>
-              {/* <OutputEducation data={educationList.education}></OutputEducation> */}
+              <OutputExperience
+                data={experienceList}
+                deleteOutput={deleteOutput}
+              ></OutputExperience>
+              <OutputEducation data={educationList}></OutputEducation>
             </div>
           </div>
         </div>

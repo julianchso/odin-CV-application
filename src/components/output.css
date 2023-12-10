@@ -1,9 +1,13 @@
+button {
+  cursor: pointer;
+}
+
 .personalInfo__name {
   display: inline-block;
 }
 
 .personalInfoContainer {
-  height: 120px;
+  height: 180px;
   width: 800px;
   color: #fff;
   background-color: #001b33;
@@ -29,6 +33,18 @@
   padding-right: 0.5rem;
 }
 
+.faIconBtn {
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.faIcon {
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
 .sectionTitle {
   background-color: var(--clr-accent);
   color: var(--fc-dark);
@@ -48,8 +64,12 @@
 .outputCard__main {
   display: flex;
   color: var(--fc-dark);
-
   justify-content: space-between;
+}
+
+.outputCard__wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .outputCard__title {

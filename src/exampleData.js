@@ -10,16 +10,6 @@ const exampleData = {
 
   experience: [
     {
-      position: 'software engineer',
-      company: 'Google',
-      startDate: '2015-09',
-      endDate: '2018-05',
-      location: 'San Francisco, California',
-      description:
-        '• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. <btMorbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
-      id: uuidv4(),
-    },
-    {
       position: 'senior software engineer',
       company: 'Netflix',
       startDate: '2018-06',
@@ -29,23 +19,33 @@ const exampleData = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. Morbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
       id: uuidv4(),
     },
+    {
+      position: 'software engineer',
+      company: 'Google',
+      startDate: '2015-09',
+      endDate: '2018-05',
+      location: 'San Francisco, California',
+      description:
+        '• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. <btMorbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
+      id: uuidv4(),
+    },
   ],
 
   education: [
-    {
-      school: 'Harvard University',
-      degree: 'Bachelors of Computer Science',
-      startDate: '2008-09',
-      endDate: '2012-05',
-      location: 'Cambridge, Massachusetts',
-      id: uuidv4(),
-    },
     {
       school: 'Columbia University',
       degree: 'Masters of Computer Science',
       startDate: '2013-09',
       endDate: '2015-05',
       location: 'New York, New York',
+      id: uuidv4(),
+    },
+    {
+      school: 'Harvard University',
+      degree: 'Bachelors of Computer Science',
+      startDate: '2008-09',
+      endDate: '2012-05',
+      location: 'Cambridge, Massachusetts',
       id: uuidv4(),
     },
   ],

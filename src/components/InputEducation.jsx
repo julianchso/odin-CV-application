@@ -2,37 +2,10 @@ import { useState } from 'react';
 import './input.css';
 import { v4 as uuidv4 } from 'uuid';
 import exampleData from '../exampleData';
+import formData from '../formData';
 import PropTypes from 'prop-types';
 
-function InputEducation(props) {
-  const [education, setEducation] = useState(exampleData.education);
-  const [educationList, setEducationList] = useState([]);
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setEducation({ ...education, [name]: value });
-    // console.log(`${name}: ${value}`);
-  };
-
-  const addEducation = () => {
-    const educationNew = {
-      school: education.school,
-      degree: education.degree,
-      startDate: education.startDate,
-      endDate: education.endDate,
-      location: education.location,
-      id: uuidv4(),
-    };
-
-    setEducationList([...educationList, educationNew]);
-    clearFields();
-  };
-
-  const clearFields = () => {
-    // console.log(education);
-    // setEducation((exampleData.education['school'] = ''));
-  };
-
+function InputEducation({ fieldValue, educationList, onChange, clearFields, addEducation }) {
   // console.log(educationList);
 
   return (
@@ -46,7 +19,7 @@ function InputEducation(props) {
               type='text'
               name='school'
               id='school'
-              value={education.school}
+              value={fieldValue.school}
               onChange={onChange}
             />
           </div>
@@ -56,7 +29,7 @@ function InputEducation(props) {
               type='text'
               name='degree'
               id='degree'
-              value={education.degree}
+              value={fieldValue.degree}
               onChange={onChange}
             />
           </div>
@@ -68,7 +41,7 @@ function InputEducation(props) {
                   type='month'
                   name='startDate'
                   id='startDate'
-                  value={education.startDate}
+                  value={fieldValue.startDate}
                   onChange={onChange}
                 />
               </div>
@@ -78,7 +51,7 @@ function InputEducation(props) {
                   type='month'
                   name='endDate'
                   id='endDate'
-                  value={education.endDate}
+                  value={fieldValue.endDate}
                   onChange={onChange}
                 />
               </div>
@@ -90,7 +63,7 @@ function InputEducation(props) {
               type='text'
               name='location'
               id='location'
-              value={education.location}
+              value={fieldValue.location}
               onChange={onChange}
             />
           </div>
