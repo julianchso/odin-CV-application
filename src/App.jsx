@@ -13,10 +13,8 @@ import './App.css';
 
 function App() {
   const [personal, setPersonal] = useState([]);
-
   const [experience, setExperience] = useState(formData.experience);
   const [experienceList, setExperienceList] = useState(exampleData.experience);
-
   const [education, setEducation] = useState(formData.education);
   const [educationList, setEducationList] = useState(exampleData.education);
 
@@ -92,10 +90,14 @@ function App() {
     });
   };
 
-  const deleteOutput = () => {
+  const deleteOutput = (e) => {
     // TODO
-    setExperience(experienceList.filter((a) => a.id !== experience.id));
-    console.log('delete');
+    console.log(e.target.id);
+
+    // const newExperienceList = experienceList.filter((a) => a.id !== experience.id);
+
+    // setExperience(newExperienceList);
+    // console.log(newExperienceList);
   };
 
   return (
