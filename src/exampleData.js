@@ -26,7 +26,7 @@ const exampleData = {
       endDate: '2018-05',
       location: 'San Francisco, California',
       description:
-        '• Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. <btMorbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor quis ultrices sollicitudin. Morbi sapien odio, dictum id dolor at, consequat lobortis nibh. Nunc non iaculis massa. Suspendisse ut turpis dui. Nunc ut eleifend augue.',
       id: uuidv4(),
     },
   ],

@@ -20,6 +20,7 @@ function App() {
 
   const onChangePersonal = (e) => {
     const { name, value } = e.target;
+    console.log(e.target.value);
     console.log(`${name}: ${value}`);
     setPersonal({
       ...personal,
@@ -30,7 +31,6 @@ function App() {
   // Experience Section
   const onChangeExperience = (e) => {
     const { name, value } = e.target;
-    // console.log(e.target);
     setExperience({ ...experience, [name]: value });
   };
 
