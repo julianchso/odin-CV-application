@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
 function App() {
-  const [personal, setPersonal] = useState([]);
+  const [personal, setPersonal] = useState(exampleData.personalInfo);
   const [experience, setExperience] = useState(formData.experience);
   const [experienceList, setExperienceList] = useState(exampleData.experience);
   const [education, setEducation] = useState(formData.education);

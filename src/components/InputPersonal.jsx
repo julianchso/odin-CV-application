@@ -12,6 +12,7 @@ function InputPersonal({ onChange }) {
             <label htmlFor='fullName'>Full Name</label>
             <input
               type='text'
+              // defaultValue={(e) => onChange(e.target.value)}
               defaultValue={exampleData.personalInfo.fullName}
               name='fullName'
               id='fullName'
@@ -23,6 +24,7 @@ function InputPersonal({ onChange }) {
             <label htmlFor='email'>Email</label>
             <input
               type='text'
+              // defaultValue={(e) => onChange(e.target.value)}
               defaultValue={exampleData.personalInfo.email}
               name='email'
               id='email'
