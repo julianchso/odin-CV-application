@@ -20,8 +20,6 @@ function App() {
 
   const onChangePersonal = (e) => {
     const { name, value } = e.target;
-    console.log(e.target.value);
-    console.log(`${name}: ${value}`);
     setPersonal({
       ...personal,
       [name]: value,
@@ -45,9 +43,7 @@ function App() {
       id: uuidv4(),
     };
     setExperienceList([experienceNew, ...experienceList]);
-    // clearFieldsExperience();
   };
-  // console.log(experienceList);
 
   const clearFieldsExperience = () => {
     setExperience({
@@ -64,7 +60,6 @@ function App() {
   const onChangeEducation = (e) => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
-    // console.log(`${name}: ${value}`);
   };
 
   const addEducation = () => {
@@ -105,7 +100,7 @@ function App() {
       <div className='app'>
         <div className='inputSection'>
           <div className='inputWrapper'>
-            <InputPersonal onChange={onChangePersonal}></InputPersonal>
+            <InputPersonal onChange={onChangePersonal} personalInfo={personal}></InputPersonal>
             <InputExperience
               fieldValue={experience}
               experienceList={experienceList}

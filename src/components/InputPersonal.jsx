@@ -1,8 +1,7 @@
 import './input.css';
 import PropTypes from 'prop-types';
-import exampleData from '../exampleData';
 
-function InputPersonal({ onChange }) {
+function InputPersonal({ onChange, personalInfo }) {
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()} className='formContainer'>
@@ -12,20 +11,17 @@ function InputPersonal({ onChange }) {
             <label htmlFor='fullName'>Full Name</label>
             <input
               type='text'
-              // defaultValue={(e) => onChange(e.target.value)}
-              defaultValue={exampleData.personalInfo.fullName}
+              value={personalInfo.fullName}
               name='fullName'
               id='fullName'
-              onChange={onChange}
-              // onChange={(e) => onChange(e.target.value)}
+              onChange={(e) => onChange(e)}
             />
           </div>
           <div className='inputGroup'>
             <label htmlFor='email'>Email</label>
             <input
               type='text'
-              // defaultValue={(e) => onChange(e.target.value)}
-              defaultValue={exampleData.personalInfo.email}
+              value={personalInfo.email}
               name='email'
               id='email'
               onChange={onChange}
@@ -35,7 +31,7 @@ function InputPersonal({ onChange }) {
             <label htmlFor='phone'>Phone Number</label>
             <input
               type='text'
-              defaultValue={exampleData.personalInfo.phone}
+              value={personalInfo.phone}
               name='phone'
               id='phone'
               onChange={onChange}
@@ -45,7 +41,7 @@ function InputPersonal({ onChange }) {
             <label htmlFor='location'>Location</label>
             <input
               type='text'
-              defaultValue={exampleData.personalInfo.location}
+              value={personalInfo.location}
               name='location'
               id='location'
               onChange={onChange}
@@ -59,6 +55,7 @@ function InputPersonal({ onChange }) {
 
 InputPersonal.propTypes = {
   onChange: PropTypes.func,
+  personalInfo: PropTypes.object,
 };
 
 export default InputPersonal;
