@@ -97,11 +97,11 @@ function InputExperience({ fieldValue, experienceList, onChange, clearFields, ad
   );
 }
 
-// InputExperience.propTypes = {
-//   position: PropTypes.string,
-//   company: PropTypes.string,
-//   startDate: PropTypes.string,
-//   endDate: PropTypes.string,
-// };
+InputExperience.propTypes = {
+  position: PropTypes.string,
+  company: PropTypes.string,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
+};
 
 export default InputExperience;

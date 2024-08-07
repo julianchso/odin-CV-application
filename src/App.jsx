@@ -43,6 +43,7 @@ function App() {
       id: uuidv4(),
     };
     setExperienceList([experienceNew, ...experienceList]);
+    console.log(experienceList);
   };
 
   const clearFieldsExperience = () => {
@@ -85,14 +86,14 @@ function App() {
     });
   };
 
-  const deleteOutput = (e) => {
-    // TODO
-    console.log(e.target.id);
+  const deleteExperience = (id) => {
+    setExperienceList(experienceList.filter((item) => item.id !== id));
 
-    // const newExperienceList = experienceList.filter((a) => a.id !== experience.id);
+    // console.log(experienceList);
+  };
 
-    // setExperience(newExperienceList);
-    // console.log(newExperienceList);
+  const deleteEducation = (id) => {
+    setEducationList(educationList.filter((item) => item.id !== id));
   };
 
   return (
@@ -129,9 +130,12 @@ function App() {
             <div className='resumeSection'>
               <OutputExperience
                 data={experienceList}
-                deleteOutput={deleteOutput}
+                deleteExperience={deleteExperience}
               ></OutputExperience>
-              <OutputEducation data={educationList}></OutputEducation>
+              <OutputEducation
+                data={educationList}
+                deleteEducation={deleteEducation}
+              ></OutputEducation>
             </div>
           </div>
         </div>
