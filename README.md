@@ -27,7 +27,7 @@ It helped me with learning React components and how to structure my code.
 ### Built With
 
 - [![JavaScript][]]
-- [![React][React.js]][React-url]
+- [![https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB]](https://react.dev/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
