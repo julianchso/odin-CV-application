@@ -10,7 +10,7 @@ const exampleData = {
 
   experience: [
     {
-      position: 'senior software engineer',
+      position: 'Senior Software Engineer',
       company: 'Netflix',
       startDate: '2018-06',
       endDate: '2023-12',
@@ -20,7 +20,7 @@ const exampleData = {
       id: uuidv4(),
     },
     {
-      position: 'software engineer',
+      position: 'Software Engineer',
       company: 'Google',
       startDate: '2015-09',
       endDate: '2018-05',

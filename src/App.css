@@ -215,3 +215,7 @@ h2 {
   margin-top: 20px;
   padding: 0 56px;
 }
+
+.inputGroup label {
+  padding-bottom: 7px;
+}
