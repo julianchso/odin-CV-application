@@ -16,11 +16,15 @@
 
 ## About The Project
 
+![app](media/app.png)
+
 This project came from The Odin Project (TOP) and it helped me in learning react.
 
 https://www.theodinproject.com/lessons/node-path-react-new-cv-application
 
 It helped me with learning React components and how to structure my code.
+
+The left side of the app is where the user can input their personal details, experience, and education. The info will be outputted to a resume-like format will on the right side.
 
 <!-- BUILT WITH -->
 
@@ -36,7 +40,7 @@ It helped me with learning React components and how to structure my code.
 
 ## Contact
 
-Julian So: [https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white](https://www.linkedin.com/in/chjulianso/)
-Project Link: [https://https://github.com/julianchso/odin-CV-application](https://https://github.com/julianchso/odin-CV-application)
+Julian So: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chjulianso/)
+Project Link: [https://github.com/julianchso/odin-CV-application](https://github.com/julianchso/odin-CV-application)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
