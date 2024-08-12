@@ -19,7 +19,7 @@
 ![app](media/app.png)
 
 ### [Live Demo](https://julianchso.github.io/odin-CV-application/)
-**(ctrl+click link above to open in new window)**
+*(ctrl+click link above to open in new window)*
 
 This project came from The Odin Project (TOP) and it helped me in learning react.
 
