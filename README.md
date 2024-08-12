@@ -18,7 +18,7 @@
 
 ![app](media/app.png)
 
-### [![Live Demo](https://julianchso.github.io/odin-CV-application/)]
+### [Live Demo](https://julianchso.github.io/odin-CV-application/)
 
 This project came from The Odin Project (TOP) and it helped me in learning react.
 
