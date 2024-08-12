@@ -1,7 +1,7 @@
 {
   "homepage": "https://julianchso.github.io/odin-cv-application/",
   "name": "odin-cv-application",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
