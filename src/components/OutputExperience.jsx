@@ -1,9 +1,10 @@
 import './output.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-function OutputExperience({ data, deleteExperience }) {
+function OutputExperience({ data, deleteExperience, editExperience }) {
   const arrData =
     data &&
     data.map((experience) => (
@@ -11,6 +12,14 @@ function OutputExperience({ data, deleteExperience }) {
         <div className='outputCard'>
           <div className='outputCard__main'>
             <div className='outputCard__wrapper'>
+              <button
+                onClick={() => {
+                  editExperience(experience.id);
+                }}
+                className='faIconBtn'
+              >
+                <FontAwesomeIcon icon={faPencil} className='faIcon__trashCan' />
+              </button>
               <button
                 onClick={() => {
                   deleteExperience(experience.id);
@@ -46,6 +55,7 @@ function OutputExperience({ data, deleteExperience }) {
 
 OutputExperience.propTypes = {
   data: PropTypes.array,
+  editExperience: PropTypes.func,
   deleteExperience: PropTypes.func,
 };
 
