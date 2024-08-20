@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const editForm = ({ value }) => {
-  const [isEditMode, setIsEditMode] = useState(false);
+const EditForm = ({ value, ...props }) => {
+  const [isEditMode, setIsEditMode] = useState(true);
 
   function turnOnEditMode() {
     setIsEditMode(true);
@@ -10,10 +11,20 @@ const editForm = ({ value }) => {
   return (
     <div>
       <span>
-        <input type='text' value={value} readOnly={!isEditMode} onClick={turnOnEditMode} />
+        <input
+          type='text'
+          value={value}
+          readOnly={!isEditMode}
+          onClick={turnOnEditMode}
+          onBlur={() => setIsEditMode(false)}
+        />
       </span>
     </div>
   );
 };
 
-export default editForm;
+EditForm.propTypes = {
+  value: PropTypes.string,
+};
+
+export default EditForm;

@@ -219,3 +219,8 @@ h2 {
 .inputGroup label {
   padding-bottom: 7px;
 }
+
+.editForm {
+  height: 20px;
+  width: 100px;
+}

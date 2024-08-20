@@ -5,7 +5,7 @@ import InputEducation from './components/InputEducation';
 import OutputPersonal from './components/OutputPersonal';
 import OutputExperience from './components/OutputExperience';
 import OutputEducation from './components/outputEducation';
-import editForm from './components/editExperience';
+import EditForm from './components/editExperience';
 import exampleData from './exampleData';
 import formData from './formData';
 import { v4 as uuidv4 } from 'uuid';
@@ -136,9 +136,10 @@ function App() {
                 deleteEducation={deleteEducation}
               ></OutputEducation>
             </div>
+            <EditForm className='editForm'></EditForm>
+            {/* <EditForm className='editForm' value={'edit this'}></EditForm> */}
           </div>
         </div>
-        <editForm></editForm>
       </div>
     </>
   );
