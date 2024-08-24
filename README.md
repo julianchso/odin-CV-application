@@ -21,11 +21,11 @@
 ### [Live Demo](https://julianchso.github.io/odin-cv-application/)
 *(ctrl+click link above to open in new window)*
 
-This project came from The Odin Project (TOP) and it helped me in learning react.
+This project came from The Odin Project (TOP).
 
 https://www.theodinproject.com/lessons/node-path-react-new-cv-application
 
-It helped me with learning React components and how to structure my code.
+It helped me with learning JavaScrip, React components using Vite, and how to structure my code.
 
 The left side of the app is where the user can input their personal details, experience, and education. The info will be outputted to a resume-like format on the right side.
 
